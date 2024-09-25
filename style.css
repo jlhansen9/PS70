@@ -5,7 +5,7 @@ body {
     padding-left: 100px;
     padding-top: 100px;
     font-size: 13px;
-    background-image: src="bgrnd.png";
+    background-image: url("bgrnd.png");
   }
 
 p {width: 600px;
@@ -27,7 +27,7 @@ pre {
 }
 
 a {
-  color: green;
+  color: #355E3B;
 }
 
 div{
