@@ -17,7 +17,7 @@
   </div>
 
   <div>
-    <pre> /final project: the music box, a machine that makes noise musical </pre>
+    <pre> /final project: the music box </pre>
   </div>
 
 
@@ -54,6 +54,8 @@ before i dive into my process of <a href="https://jlhansen9.github.io/PS70/weeks
   I work in a noisy office space so often rely on headphones to block out sound. While I love to listen to music, often the music itself is distracting. I wanted to find a balanced middle ground that filtered out the noise but focused me on my work, instead of distracting me.
 </p>
 
+<p><img src="product/fair_day_setup.png" width="500" alt="inside view"></p>
+
 </div>
 
 <div id="section2">
@@ -85,12 +87,24 @@ before i dive into my process of <a href="https://jlhansen9.github.io/PS70/weeks
 </p>
 
 <p>
-<img src="v1mech/2_base_foam.png" width="500" alt="base with foam">
+<img src="circuitry/circuit_chain.png" width="500" alt="input to output chain">
 </p>
 
 <p>
 The current model relies on a breadboard for housing the ESP32 and Micro-LiPo charger.
 </p>
+
+<p>
+  <img src="circuitry/circuit_chain_back.png" width="500" alt="ESP32 and Micro-LiPo charger on breadboard">
+</p>
+
+<p> The TFT display and INMP441 Microphone are then exposed while the circuit board is contained within the housing </p>
+
+<p>
+  <img src="circuitry/assembly.png" width="500" alt="INMP441 and TFT 2.8 inch display">
+  <img src="circuitry/inside_circuitry.png" width="500" alt="ESP32 and Micro-LiPo charger on breadboard">
+</p>
+
 
 </div>
 
@@ -126,6 +140,8 @@ The current model relies on a breadboard for housing the ESP32 and Micro-LiPo ch
   <p>
     Instead I pivoted and chose an inclined front panel. This was easier to print and allowed for simpler customisation of the front panel. I could progress to focusing on how the front and back panels enclosed the circuitry. Affixing the screen, audio jack and knob took several tests to have each part able to withstand pushing and pulling.
   </p>
+
+
 
   <p>
     The knob was based on the Moog knob design.
@@ -165,18 +181,15 @@ The current model relies on a breadboard for housing the ESP32 and Micro-LiPo ch
     The delay function is the first sound effect I added. This is written as a function that takes an audio sample as it is written to the DAC and played it adds the value to the buffer array at a offset in the future and a reduced value (x/3).
   </p>
 
-<iframe src="https://app.arduino.cc/sketches/2ce3cb42-7dfd-4930-a417-f20a26667038?view-mode=embed" style="height:510px;width:60%;margin:10px 0" frameborder=0></iframe>
+<iframe src="https://app.arduino.cc/sketches/0db54f61-e4fb-42db-ae59-afd47d57f7a9" style="height:510px;width:60%;margin:10px 0" frameborder=0></iframe>
 
 <p> ~ video ~ </p>
-
+<p>The video code is based on examples from the  <a href="https://github.com/Bodmer/TFT_eSPI">TFT_eSPI Library</a>. The meter example has been adapted to show the amplitude of the audio signal using an analogue read from the microphone.</p>
+<iframe src="https://app.arduino.cc/sketches/1bee3247-34ee-440f-a010-7052edf0d6be" style="height:510px;width:60%;margin:10px 0" frameborder=0></iframe>
 
 <p> ~ volume ~ </p>
-
-<p> 
-  The potentiometer code is the same example from the Drone Bot Workshop with an alternative radio station. I was not able to fully integrate into the other code.
-</p>
-
-<iframe src="https://app.arduino.cc/sketches/2ce3cb42-7dfd-4930-a417-f20a26667038?view-mode=embed" style="height:510px;width:60%;margin:10px 0" frameborder=0></iframe>
+<p> The potentiometer code is the same example from the <a href="https://dronebotworkshop.com/esp32-i2s/">Drone Bot Workshop</a> with an alternative radio station. I was not able to fully integrate into the other code.</p>
+<iframe src="https://app.arduino.cc/sketches/869642a4-2eab-4e62-b7d0-43b50eaac186" style="height:510px;width:60%;margin:10px 0" frameborder=0></iframe>
 
 </div>
 
@@ -190,6 +203,30 @@ The current model relies on a breadboard for housing the ESP32 and Micro-LiPo ch
   </pre>
 
 <p>
+New features I hope to add include sine wave addition to create tones, chords and potentially even a basic synthesiser.
+</p>
+<p>
+I would like to redo circuitry on a protoboard and redo the housing to better accomdate the circuitry. Currently I am worried that if I were to bump or drop the box, everything would break so I would like to strengthen the box and internal wiring.
+</p>
+<p>
+Upgrading the microcontroller to one with a better DAC would also be an interesting next phase, not only improving sound quality but allowing more audio effects that rely on greater resolution in audio information.
+</p>
+
+<p><img src="product/MusicBox_PanHeadphones.gif" width="500" alt="inside view"></p>
+
+
+</div>
+
+<div id="section5">
+  <pre style="color:gray">
+# thank you
+  </pre>
+  <pre style="color:gray">
+# ---------------------------------
+</pre>
+
+<p>
+  Thank you to Nathan, Kassia and Bobby McCarthy for their help throughout this project. Bobby in particular, gave up so much his own time to help me with this project and I am extremely grateful. That man deserves a raise!
 </p>
 
 </div>
