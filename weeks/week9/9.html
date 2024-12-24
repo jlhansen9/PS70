@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>week 9 of ps70 with manas</title>
+  <title>week 9 of ps70 with jim</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
   
     <div>
     <pre>
-<a href="https://manas-kulkarnii.github.io/PS70/">back to home</a> 
+<a href="https://jlhansen9.github.io/PS70/">back to home</a> 
     </pre>
   </div>
 
@@ -21,56 +21,48 @@
 /week 9: radio, wifi, bluetooth (IoT)
     </pre>
   </div>
+
+  <p>
+    I teamed up with Jack Schwab for this week's assignment. We joined forces because our final projects were complimentary. Jack is working on a Hall Effect sensor to read rotations of a motor, like a crank. I'm working on audio and already had code for connecting to an online radio station. 
+  </p>
   
-
-  
-  <div>
-    <pre style="color:gray">
-# day of the week led display
-    </pre>
-    <pre style="color:gray">
-# ---------------------------------
-  </pre>
-    <p>
-this week, linden and i tackled the networking assignment by creating an led display to indicate the day of the week. we started by designing a display that had seven distinct slots, each representing a different day. our design included pass-through holes for each slot, which allowed us to run wiring to connect the electronics from underneath. after finalizing the prototype design, we proceeded to 3d print it.
-
-this was a good opportunity for me to learn a bit more about grasshopper. click <a download href='networking_assignment.gh'>here</a> to download the grasshopper file. 
+<p>
+  What do you get with a Hall Effect sensor and a radio station? A gramophone!
 </p>
 
 <p>
-<img src="networking_rhino.png" width="500" alt="3d model of led display">
+  We wired a speaker and amplifier through a horn, placed a Hall Effect sensor on the bottom of a small board and had a crank with magnets attached that could be spun to pass the sensor. We had our ESP32 and a L9110 amplifier.
 </p>
 
 <p>
-to ensure our display would show the correct day, we used an esp32 board, which is a microcontroller with wi-fi capability. this board was programmed to retrieve the current day from an ntp server. an ntp server is a dedicated computer that uses the network time protocol to provide devices with the precise time and date, ensuring our display would always be accurate.
-
+  <img src="week9/gramophone_1.png" width="500" alt="top view">
+  <img src="week9/gramophone_2.png" width="500" alt="side view">
 </p>
 
 <p>
-
-our code is designed to connect to a wi-fi network, synchronize time with an ntp server, and control a set of leds based on the day of the week. it defines a structure to associate gpio pins with days of the week and initializes a wi-fi connection using specified credentials. once connected, it retrieves the current time, disconnects from wi-fi to save power, and sets each pin to an output mode. in its main loop, the code continuously checks the current day and activates the corresponding led for that day, turning on one led each day of the week, while turning off all others. it has error handling for failure to obtain the time, and serial print statements for debugging and monitoring its status.
-</p>
-<p>
-this is the code we used:
+  Each rotation triggered audio to be played for a short duration of 1 second. We wanted to make you work hard for that music! You need to keep rotating the crank to play sound.
 </p>
 
 <p>
-<img src="code1.png" width="500" alt="arduino code">
+  <iframe src="https://app.arduino.cc/sketches/f6934960-4d0d-4007-b2a8-7f8a53ca82bb" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 </p>
 
 <p>
-<img src="code2.png" width="500" alt="arduino code">
+  <video width="500" controls>
+    <source src="week9/gramophone.mov">
+</video>
 </p>
 
 <p>
-while the printing was underway, we focused on coding. we started by experimenting on a breadboard, connecting several leds to the esp32 using resistors and tested our code. with the code working correctly, we moved on to constructing the final product. we soldered wires to the leds and carefully placed them into the designed slots of our display. after setting up the circuitry and initiating our code, the display came to life, with the green led shining brightly to indicate that it was thursday.
+  We ran out of time polishing off the housing but got everything working satisfactorily.
+</p>
 
 <p>
-<img src="final.jpeg" width="500" alt="final day of the week led display">
-</p>
+  Some last thoughts, we tried using a Gramophone model from <a href="https://www.thingiverse.com/thing:2805415">Thingiverse</a> that looked really good but turned out to be really difficult to edit and work with. Was an STL but we needed more editable features. Would have been best to build our own model to our needs.
 </p>
 
-  </div>
+<a href="https://www.thingiverse.com/thing:2805415">Thingiverse</a>
+
 
 </body>
 

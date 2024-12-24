@@ -11,8 +11,10 @@ VIDEO
     <iframe width="500" height="281" src="https://youtu.be/0pYUt2mtMTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
+HYPERLINK
+    <a href="https://jlhansen9.github.io/PS70/weeks/week1/1.html">ideating</a>
 
-Example Arduino Sketch
+ARDUINO SKETCH
     <iframe src="https://app.arduino.cc/sketches/2ce3cb42-7dfd-4930-a417-f20a26667038?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
 
 
